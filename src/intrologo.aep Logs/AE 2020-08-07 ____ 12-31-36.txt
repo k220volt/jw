@@ -1,0 +1,8 @@
+  2020-08-07 오후 12:31:36: Starting composition “intro”.
+
+  Output To: D:\AKHK\Tasks\JW소개홈피\src\intro.mov    2020-08-07 오후 12:31:37: Finished composition “intro”.
+
+
+  Total Time Elapsed: 1 Seconds
+Log closed on 2020-08-07 at 오후 12:31:37
+
