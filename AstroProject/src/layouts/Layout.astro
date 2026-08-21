@@ -1,23 +1,35 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import Header from '../components/Header.astro';
+import '../styles/bootstrap-4.3.1.css';
+import '../styles/jwmobile.css';
+import '../styles/jwpc.css';
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Diva 적우</title>
+
+<script is:inline src="/scripts/jquery-3.3.1.min.js"></script>
+<script is:inline src="/scripts/popper.min.js"></script>
+<script is:inline src="/scripts/bootstrap-4.3.1.js"></script>
+
+<script type="text/javascript">
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+</script>
+</head>
+
+<body>
+<div class="content">
+   <Header />
+   <slot />
+</div>
+
+</body>
+</html>

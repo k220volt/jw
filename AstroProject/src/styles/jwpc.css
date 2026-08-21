@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+#logo {
+    width: 500px;
+    height: 227px;
+}
+
+@media (min-width:640px){
+	#movie_main iframe {
+    width: 640px;
+    height: 360px;
+    }
+}
+
+@media (min-width:1024px){
+	#pic_main, #profile_main {
+    text-align: center;
+    }
+	#pic_main img, #profile_main img {
+    width: 1024px;
+    }
+}
