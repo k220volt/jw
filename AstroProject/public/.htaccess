@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# 요청한 파일이나 폴더가 실제로 존재하지 않으면 .html을 붙여서 찾음
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
