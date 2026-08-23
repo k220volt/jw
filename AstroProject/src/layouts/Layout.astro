@@ -3,6 +3,8 @@ import Header from '../components/Header.astro';
 import '../styles/bootstrap-4.3.1.css';
 import '../styles/jwmobile.css';
 import '../styles/jwpc.css';
+
+const pageClass = Astro.url.pathname.replace(/^\//, '').replace(/\.html$/, '') || 'index';
 ---
 
 <!doctype html>
@@ -25,7 +27,7 @@ function MM_goToURL() { //v3.0
 </script>
 </head>
 
-<body>
+<body class={`page-${pageClass}`}>
 <div class="content">
    <Header />
    <slot />

@@ -45,6 +45,16 @@
 	background-color: #526A9C;
 }
 
+#mainmenu_button1:hover, #mainmenu_button2:hover, #mainmenu_button3:hover,
+#profilebutton1:hover, #profilebutton2:hover, #profilebutton3:hover {
+    background-color: #2A498A;
+}
+
+body.page-jw_movie #mainmenu_button2,
+body.page-jw_pic #mainmenu_button3 {
+    background-color: #2A498A;
+}
+
 #profilebutton1{
     background-color: #2A498A;
 }
