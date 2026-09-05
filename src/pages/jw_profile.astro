@@ -10,12 +10,115 @@ import Layout from '../layouts/Layout.astro';
   }
 </style>
 
+<style>
+  .jw-profile-bios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.25rem 2rem;
+    text-align: left;
+  }
+  .jw-profile-bio {
+    flex: 1 1 22rem;
+    min-width: 0;
+    max-width: 42rem;
+    line-height: 1.45;
+  }
+  .jw-profile-bio p,
+  .jw-profile-bio h1,
+  .jw-profile-bio h2,
+  .jw-profile-bio ul {
+    margin: 0;
+  }
+  .jw-profile-bio ul {
+    list-style: none;
+    padding: 0;
+  }
+  .jw-profile-bio .headline {
+    color: #cc5438;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+  .jw-profile-bio .artist-name {
+    color: #6c5050;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+  }
+  .jw-profile-bio .agency {
+    color: #b07a72;
+    font-size: 1rem;
+    margin-bottom: 0.85rem;
+  }
+  .jw-profile-bio .intro {
+    color: #4a4044;
+    font-size: 0.88rem;
+    margin-bottom: 1.1rem;
+  }
+  .jw-profile-bio .section-title {
+    font-size: 1.22rem;
+    font-weight: 700;
+    margin: 0.9rem 0 0.35rem;
+  }
+  .jw-profile-bio .section-title.broadcast,
+  .jw-profile-bio .section-title.concert {
+    color: #2e2a2c;
+  }
+  .jw-profile-bio .section-title.album {
+    color: #c0789c;
+  }
+  .jw-profile-bio .body-list {
+    color: #4a4044;
+    font-size: 0.88rem;
+  }
+  .jw-profile-bio .album-list {
+    font-size: 0.88rem;
+    color: #c0789c;
+  }
+  .jw-profile-bio .album-list .year {
+    color: #2e2a2c;
+    font-weight: 700;
+  }
+  .jw-profile-bio .edu {
+    color: #4a4044;
+    font-size: 0.92rem;
+    margin-top: 1.1rem;
+  }
+  .jw-profile-bio .edu strong {
+    color: #2e2a2c;
+  }
+  .jw-profile-bio.en .headline {
+    color: #d35400;
+    text-transform: uppercase;
+  }
+  .jw-profile-bio.en .artist-name {
+    color: #555555;
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin-bottom: 0.45rem;
+  }
+  .rule {
+    border: 0;
+    border-top: 1px solid #c8c8c8;
+    margin: 0 0 0.85rem;
+  }
+  .jw-profile-bio.en .album-list .year {
+    color: inherit;
+    font-weight: 400;
+  }
+</style>
+
 <Layout>
  <div class="btn-group d-flex" id="mainmenu2" role="group" aria-label="Justified button group with nested dropdown">
 	  <div class="btn-group w-100" role="group">
 	    <button type="button" id="profilebutton1" class="btn btn-secondary dropdown-toggle w-100" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 프로필목차 </button>
 	    <ul class="dropdown-menu">
-	      <li><a href="#profile01">&nbsp;프로필 Profile</a></li>
+	      <li><a href="#profile_main">&nbsp;프로필 Profile</a></li>
 	      <li><a href="#profile02">&nbsp;사진 Pictures</a></li>
 	      <li><a href="#profile03">&nbsp;음악앨범 Albums</a></li>
 	      <li><a href="#profile04">&nbsp;콘서트 Concert</a></li>
@@ -28,10 +131,169 @@ import Layout from '../layouts/Layout.astro';
     <a id="profilebutton3" class="btn btn-secondary w-100" href="/jw_pic" role="button">적우 화보</a>  	
   </div>
   <div id="profile_main">
-    <img src="/src/image1.jpg" id="profile_image1" alt=""><br>
-    <img src="/src/image2.jpg" id="profile_image2" alt=""><br><span id="profile01"></span><br><br>
-    <a href="src/image3.jpg" target="_blank"><img src="/src/image3.jpg"  id="profile_image3"></a><br><span id="profile02"></span><br><br>
-    <a href="src/image4.jpg" target="_blank"><img src="/src/image4.jpg"  id="profile_image4"></a><br><span id="profile03"></span><br><br>
+    <div class="jw-profile-bios">
+    <section class="jw-profile-bio" id="jw-profile-bio">
+      <h1 class="headline">영혼을 울리는 슈퍼디바!</h1>
+      <p class="artist-name">적우(Red Sun 가수/탤런트)</p>
+      <p class="agency">소속사 : 스페라엔터테인먼트</p>
+      <hr class="rule">
+      <div class="intro">
+        <p>2004년 MBC 수요예술무대로 데뷔</p>
+        <p>대중여가수 최초 예술의전당 토월극장 단독공연 (3일매진기록)</p>
+        <p>한국적인 라운지 음악을 처음 시작</p>
+        <p>장르를 초월한 영혼을 울리는 슈퍼디바</p>
+      </div>
+      <h2 class="section-title broadcast">방송활동</h2>
+      <ul class="body-list">
+        <li>대한민국 대표방송 3사 음악프로그램</li>
+        <li>KBS 윤도현 러브레터, MBC 김동률 포유, SBS 김정은 초콜릿 출연</li>
+        <li>MBC 주말드라마 문희 주제곡 “바람의탱고”,</li>
+        <li>KBS 수·목 미니시리즈 황금사과 “꿈꾸는카사비앙카”,</li>
+        <li>SBS 월·화 미니시리즈 게임의여왕 “널원해” 등 주제곡을 불렀으며</li>
+        <li>방송 3사 드라마 10여편에 OST 참가</li>
+        <li>2012년 MBC 나는가수다 명예졸업</li>
+        <li>방송 3사 음악프로그램 불후의명곡, 열린음악회, 콘서트7080, 가요무대 등 출연중</li>
+        <li>MBC 복면가왕 불가사리로 우승, 보컬여신 아테나로 준우승</li>
+        <li>탤런트 적우 : MBC 한강수타령 조연, SBS 사랑이오네요 주조연 박리나</li>
+        <li><strong style="color:#d60000;">2025~2026년 TV조선 '미스트롯4' 출연</strong></li>        
+  
+      </ul>
+      <h2 class="section-title album">앨범발매</h2>
+      <ul class="album-list">
+        <li><span class="year">2022</span> 잃어버린전설 70’ 적우. LP 음반 발매</li>
+        <li><span class="year">2021</span> SBS 드라마 불새 2020 OST “시선” 발매</li>
+        <li><span class="year">2020</span> JUST BLUES 2020 적우. LP 앨범 발매</li>
+        <li><span class="year">2017</span> MBC 드라마 역류 OST “I cry” 음원발매</li>
+        <li><span class="year">2016</span> SBS 드라마 사랑이 오네요 OST “사랑이 오네요” 음원발매</li>
+        <li><span class="year">2016</span> 디지털싱글 4곡 발표</li>
+        <li><span class="year">2014</span> 적우 리미티드 에디션 발매</li>
+        <li><span class="year">2014</span> 메탈미니앨범 주문 발매</li>
+        <li><span class="year">2013</span> 12월 디지털싱글 2곡 발표</li>
+        <li><span class="year">2013</span> 11월 디지털싱글 3곡 발표</li>
+        <li><span class="year">2013</span> 5월 디지털싱글 4곡 발표</li>
+        <li><span class="year">2012</span> 기획앨범 잃어버린전설 Vol.2 발매</li>
+        <li><span class="year">2012</span> 기획앨범 귀환 발매</li>
+        <li><span class="year">2011</span> 베스트앨범 The Greatest Best 발매</li>
+        <li><span class="year">2011</span> The Greatest Part.1 발매</li>
+        <li><span class="year">2008</span> 3집 정규앨범 적우 Vol.3 Spero Spera 발매</li>
+        <li><span class="year">2007</span> 2집 정규앨범 적우 Vol.2 황진이 발매</li>
+        <li><span class="year">2006</span> 1.5집 기획앨범 잃어버린전설 70 발매</li>
+        <li><span class="year">2004</span> 1집 정규앨범 적우 Vol.1 Chocolate 발매 및 데뷔</li>
+      </ul>
+      <h2 class="section-title concert">콘서트활동</h2>
+      <ul class="body-list">
+        <li>2026 8월 슈퍼디바 적우 콘서트 (보고싶다, 대구 영남대학교 천마아트센터)</li>
+        <li>2026 7월 더 가까이 보고싶다. 서울앵콜 (서울 큐브컨벤션센터)</li>
+        <li>2026 5월 슈퍼디바 적우 콘서트 (보고싶다, 제주 코코컬쳐클럽)</li>
+        <li>2026 4월 슈퍼디바 적우 콘서트 (보고싶다, 광주 조선대 해오름관)</li>
+        <li>2022 하울링 콘서트 Sound of Aura 부산, 광주</li>
+        <li>2019 더케이호텔그랜드볼룸 자선 단독 디너콘서트</li>
+        <li>2018 4월 26일 롯데호텔 디너콘서트</li>
+        <li>2017 12월 26일 하얏트호텔 디너콘서트</li>
+        <li>2016 10월 29일 적우&amp;알리 슈퍼디바 콘서트</li>
+        <li>2016 6월 18일 대구 단독콘서트</li>
+        <li>2016 4월 24일 서울 단독콘서트</li>
+        <li>2016 3월 25일 적우&amp;소향 슈퍼디바 콘서트</li>
+        <li>2015 적우단독콘서트 충주에 붉은태양이 다시 뜬다</li>
+        <li>2015 적우와 함께 하는 크리스마스 스파클링 콘서트</li>
+        <li>2015 적우단독콘서트 타임머신 콘서트</li>
+        <li>2013 자선공연 레인보우 콘서트</li>
+        <li>2013 안동 창작뮤지컬 왕의나라 노국공주 역</li>
+        <li>2013 여수 엑스포 나는가수다 콘서트 출연</li>
+        <li>2013 칠포국제재즈페스티벌 오픈공연</li>
+        <li>2013 ROCK &amp; LOVE 적우 대구 단독콘서트</li>
+        <li>2012 여수 엑스포 개막공연 팝페스티벌 단독공연</li>
+        <li>2012 이은미콘서트 게스트공연 / 임재범 연말콘서트 게스트공연</li>
+        <li>2012 나는가수다 앵콜 연말콘서트 / 강릉MBC 송년특집콘서트</li>
+        <li>2010 대중여가수최초 예술의전당 토월극장 단독콘서트(3일매진기록)</li>
+        <li>2010 앵콜공연 Spero 콘서트</li>
+        <li>2009 적우 단독콘서트 하루만 / Concert The Feeling 감성콘서트</li>
+        <li>2004 데뷔 쇼케이스 - 하얏트호텔 그랜드볼룸</li>
+      </ul>
+      <p class="edu"><strong>Edu :</strong> 서울대학교 행정대학원 AIC 창의융합 최고위과정</p>
+    </section>
+    <section class="jw-profile-bio en">
+      <h1 class="headline">SUPER DIVA JEOKWOO</h1>
+      <p class="artist-name">( Red Sun. Singer/Actress)</p>
+      <hr class="rule">
+      <div class="intro">
+        <p>2004 debut with MBC Art Stage TV program</p>
+        <p>First female singer who performed solo concert at Seoul Arts Center</p>
+        <p>Released the first korean lounge music album</p>
+        <p>One of the best vocal of all genres of music</p>
+      </div>
+      <h2 class="section-title broadcast">TV Activities</h2>
+      <ul class="body-list">
+        <li>Korean major TV music programs</li>
+        <li>KBS “Love letter”, MBC “For you”, SBS “Chocolate”</li>
+        <li>MBC soap opera “Moon Hee” theme song “Tango of the wind”</li>
+        <li>KBS soap opera “Golden Apple” theme song “Casabianca”</li>
+        <li>SBS soap opera “Queen of the game” theme song “I want you”</li>
+        <li>and 10 OST songs of ongoing TV dramas</li>
+        <li>2012 Honored with MBC music pro “I am a singer” last competitors</li>
+        <li>The Winner and Final competitor for MBC “Masked singer”</li>
+        <li>Performing on Major TV programs “Songs of Legends”,</li>
+        <li>“Open Concert”,“Concert 7080”,“GayoMudae”</li>
+        <li>Actress : MBC TV soap opera “Hanriver”, SBS “Love is comming”</li>
+        <li><strong style="color:#d60000;">2025~2026 TV Chosun 'Miss Trot 4' </strong></li>      
+      </ul>
+      <h2 class="section-title album">Discography</h2>
+      <ul class="album-list">
+        <li><span class="year">2022</span> The lost of legend 70 (LP remastered album)</li>
+        <li><span class="year">2021</span> SBS soap opera “Bul-sae 2020” OST “Si-seon”</li>
+        <li><span class="year">2020</span> JUST BLUES 2020 (LP album)</li>
+        <li><span class="year">2017</span> MBC soap opera “Yeog-lyu” OST “I cry”</li>
+        <li><span class="year">2016</span> SBS soap opera “Love is comming” OST</li>
+        <li><span class="year">2016</span> Digital singles 4 songs</li>
+        <li><span class="year">2014</span> Limited Edition With New Songs</li>
+        <li><span class="year">2014</span> Mini album Ju-Mun (metal)</li>
+        <li><span class="year">2013</span> December Digital singles 2 songs</li>
+        <li><span class="year">2013</span> November Digital singles 3 songs</li>
+        <li><span class="year">2013</span> May Digital singles 4 songs</li>
+        <li><span class="year">2012</span> The Lost Legend Vol.2 (remake album)</li>
+        <li><span class="year">2012</span> Gwihwan (Return)</li>
+        <li><span class="year">2011</span> The Greatest Best Album</li>
+        <li><span class="year">2011</span> The Greatest Part.1</li>
+        <li><span class="year">2008</span> Jeokwoo(Redsun) Vol.3 Spero Spera</li>
+        <li><span class="year">2007</span> Jeokwoo(Redsun) Vol.2 hwangjini</li>
+        <li><span class="year">2006</span> The lost of legend 70 (remake album)</li>
+        <li><span class="year">2004</span> Jeokwoo(Redsun) Vol.1 Chocolate</li>
+      </ul>
+      <h2 class="section-title concert">Concerts</h2>
+      <ul class="body-list">
+        <li>2026 Aug. Super Diva Red Sun Concert ("I Miss You", Cheonma Arts Center, Yeungnam Univ., Daegu)</li>
+        <li>2026 Jul. Closer to You ("I Miss You" Seoul Encore, Cube Convention Center, Seoul)</li>
+        <li>2026 May. Super Diva Red Sun Concert ("I Miss You", COCO Culture Club, Jeju)</li>
+        <li>2026 Apr. Super Diva Red Sun Concert ("I Miss You", Haeoreum Hall, Chosun Univ., Gwangju)</li>
+        <li>2022 Howling Concert Sound of Aura. Busan, Gwangju</li>
+        <li>2019 The K Hotel Grand Ballroom Charity Dinner Concert</li>
+        <li>2018 April 25 Lotte Hotel Dinner Concert</li>
+        <li>2017 Dec 26 Hyatt Hotel Dinner Concert</li>
+        <li>2016 Oct 29 Jeokwoo(Redsun)&amp;Alli Super Diva Concert</li>
+        <li>2016 June 18 Daegu Concert</li>
+        <li>2016 April 24 Seoul Concert</li>
+        <li>2016 March 25 Jeokwoo(Redsun)&amp;Sohyang Super Diva Concert</li>
+        <li>2015 Chungju Concert “Redsun is rising again”</li>
+        <li>2015 Christmas Sparkling Concert</li>
+        <li>2015 Time Machine Concert</li>
+        <li>2013 Rainbow Concert 2013</li>
+        <li>2013 Musical Kingdom of king (princess Nogug)</li>
+        <li>2013 Yeosu Expo “I am a singer” Concert</li>
+        <li>2013 Chilpo Jazz Festival</li>
+        <li>2013 Daegu Concert ROCK &amp; LOVE</li>
+        <li>2012 Yeosu Expo Pop Festival Concert</li>
+        <li>2012 Sinchon blues guest/Imjaebeom concert guest</li>
+        <li>2012 “I am a singer” Encore Concert/Gangleung MBC Concert</li>
+        <li>2010 Seoul Arts Center Concert (sellout in 3 days)</li>
+        <li>2010 Spera Encore Concert</li>
+        <li>2010 Gangleung The Greatest Concert</li>
+        <li>2009 Concert Haruman/Concert The Feeling</li>
+        <li>2004 Debut Showcase - Hyatt Hotel Grand Ballroom</li>
+      </ul>
+      <p class="edu"><strong>Edu :</strong> Seoul National University GSPA. AIC</p>
+    </section>
+    </div>
+    <a href="./jw_pic" target="_blank"><img src="/src/image4.jpg"  id="profile_image4"></a><br><span id="profile03"></span><br><br>
     <a href="src/image5.jpg" target="_blank"><img src="/src/image5.jpg"  id="profile_image5"></a><br><span id="profile04"></span><br><br>
     <a href="src/image6.jpg" target="_blank"><img src="/src/image6.jpg"  id="profile_image6"></a><br>
     <a href="src/image7.jpg" target="_blank"><img src="/src/image7.jpg"  id="profile_image7"></a><br><span id="profile05"></span><br><br>
@@ -39,6 +301,5 @@ import Layout from '../layouts/Layout.astro';
     <a href="src/image9.jpg" target="_blank"><img src="/src/image9.jpg"  id="profile_image9"></a><br><span id="profile07"></span><br><br>
     <a href="src/image10.jpg" target="_blank"><img src="/src/image10.jpg"  id="profile_image10"></a><br>
     <a href="src/image11.jpg" target="_blank"><img src="/src/image11.jpg"  id="profile_image11"></a><br>
-    <a href="src/image12.jpg" target="_blank"><img src="/src/image12.jpg"  id="profile_image12"></a><br>
   </div> 
 </Layout>
