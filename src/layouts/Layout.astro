@@ -1,10 +1,11 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 import Header from '../components/Header.astro';
 import '../styles/bootstrap-4.3.1.css';
 import '../styles/jwmobile.css';
 import '../styles/jwpc.css';
 
-const pageClass = Astro.url.pathname.replace(/^\//, '').replace(/\.html$/, '') || 'index';
+const pageClass = Astro.url.pathname.slice(base.length).replace(/^\//, '').replace(/\.html$/, '') || 'index';
 ---
 
 <!doctype html>
@@ -15,9 +16,9 @@ const pageClass = Astro.url.pathname.replace(/^\//, '').replace(/\.html$/, '') |
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Super Diva 적우</title>
 
-<script is:inline src="/scripts/jquery-3.3.1.min.js"></script>
-<script is:inline src="/scripts/popper.min.js"></script>
-<script is:inline src="/scripts/bootstrap-4.3.1.js"></script>
+<script is:inline src={`${base}/scripts/jquery-3.3.1.min.js`}></script>
+<script is:inline src={`${base}/scripts/popper.min.js`}></script>
+<script is:inline src={`${base}/scripts/bootstrap-4.3.1.js`}></script>
 
 <script type="text/javascript">
 function MM_goToURL() { //v3.0
